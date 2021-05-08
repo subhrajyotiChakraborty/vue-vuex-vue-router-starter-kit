@@ -1,3 +1,7 @@
+/* eslint-disable space-before-function-paren */
+/* eslint-disable quotes */
+/* eslint-disable semi */
+
 import Vue from "vue";
 import Vuetify from "vuetify";
 
