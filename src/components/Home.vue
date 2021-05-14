@@ -1,8 +1,18 @@
 <template>
     <v-app>
         <v-container>
-            <p>HOME</p>
-            <p>{{totalCount}}</p>
+          <v-parallax dark src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+            <v-row align="center" justify="center">
+              <v-col cols="12">
+                <h1 class="display-1">
+                  HOME
+                </h1>
+                <h3 v-if="totalCount !== 0">
+                  Total TODOS are {{totalCount}}
+                </h3>
+              </v-col>
+            </v-row>
+          </v-parallax>
         </v-container>
     </v-app>
 </template>
