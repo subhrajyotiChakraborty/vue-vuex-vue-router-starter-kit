@@ -18,6 +18,12 @@ const state = {
   details: {}
 };
 
+const getters = {
+  todoDetails: state => {
+    return state.details;
+  }
+};
+
 const mutations = {
   getTodos(state, payload) {
     const updatedState = [...state.todos, ...payload];
@@ -45,6 +51,7 @@ const actions = {
 
 export const store = new Vuex.Store({
   state,
+  getters,
   mutations,
   actions
 });
