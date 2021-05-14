@@ -35,7 +35,7 @@ export default {
     return {
       links: [
         {
-          text: 'Lists',
+          text: 'List',
           disabled: false,
           href: '/#/list'
         },
