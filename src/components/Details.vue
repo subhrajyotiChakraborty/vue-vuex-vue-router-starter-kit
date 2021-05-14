@@ -8,7 +8,15 @@
 
 <script>
 export default {
-  name: 'Details'
+  name: 'Details',
+  // eslint-disable-next-line space-before-function-paren
+  created: function() {
+    console.log('[details] created')
+  },
+  // eslint-disable-next-line space-before-function-paren
+  destroyed: function() {
+    console.log('[details] destroyed')
+  }
 }
 </script>
 

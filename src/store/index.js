@@ -14,13 +14,20 @@ const state = {
       name: "Subha"
     }
   ],
-  todos: []
+  todos: [],
+  details: {}
 };
 
 const mutations = {
   getTodos(state, payload) {
     const updatedState = [...state.todos, ...payload];
     state.todos = updatedState;
+  },
+  getTodoDetails(state, payload) {
+    state.details = payload;
+  },
+  resetTodoDetails(state, payload) {
+    state.details = {};
   }
 };
 
@@ -28,6 +35,11 @@ const actions = {
   async getAsyncTodods({ commit, state }) {
     const response = await instance.get("/");
     commit("getTodos", response.data);
+  },
+
+  async getTodoDetailsAsync({ commit, state }, todoID) {
+    const response = await instance.get(`/${todoID}`);
+    commit("getTodoDetails", response.data);
   }
 };
 
